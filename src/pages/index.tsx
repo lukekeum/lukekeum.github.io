@@ -1,15 +1,15 @@
+import "../styles/reset.css"
+
 import * as React from "react"
 
-import Layout from "../components/Layout"
+import Navbar from "../components/Navbar"
 import Seo from "../components/Seo"
 
 const IndexPage = () => (
-  <Layout>
+  <>
     <Seo />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-  </Layout>
+    <Navbar />
+  </>
 )
 
 export default IndexPage
