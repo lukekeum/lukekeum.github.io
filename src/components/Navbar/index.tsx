@@ -1,18 +1,16 @@
 import "./index.scss"
 import React from "react"
-import Container from "./Container"
-import BuyMeACoffee from "./BuyMeACoffee"
 import { Link } from "gatsby"
 
 interface NavbarProps {}
 
-export default function Navbar() {
+export default function Navbar({}: NavbarProps) {
   return (
-    <Container>
-      <h1 id="navbar__title">
+    <nav id="navbar__wrapper">
+      <h1>
         <Link to="/">lukekeum.me</Link>
       </h1>
-      <BuyMeACoffee />
-    </Container>
+      <a href="https://github.com/lukekeum">github</a>
+    </nav>
   )
 }
