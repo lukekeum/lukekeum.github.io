@@ -35,6 +35,14 @@ module.exports = {
         implementation: require("node-sass"),
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/posts`,
+      },
+    },
+    `gatsby-transformer-remark`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
