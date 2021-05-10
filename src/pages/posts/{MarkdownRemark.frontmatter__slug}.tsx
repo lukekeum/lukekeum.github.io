@@ -1,21 +1,31 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Posts from "../../components/Posts"
+import Navbar from "../../components/Navbar"
 
-export default function Template({ data }: any) {
+export interface PostQueryType {
+  html: string
+  frontmatter: {
+    date: string
+    slug: string
+    title: string
+  }
+}
+
+interface TemplateProps {
+  data: {
+    markdownRemark: PostQueryType
+  }
+}
+
+export default function Template({ data }: TemplateProps) {
   const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
 
   return (
-    <div className="blog-post-container">
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </div>
-    </div>
+    <>
+      <Navbar />
+      <Posts data={markdownRemark} />
+    </>
   )
 }
 
@@ -24,7 +34,7 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date
         slug
         title
       }
