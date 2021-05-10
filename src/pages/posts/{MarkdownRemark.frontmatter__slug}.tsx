@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 export default function Template({ data }: any) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+
   return (
     <div className="blog-post-container">
       <div className="blog-post">
