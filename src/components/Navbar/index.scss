@@ -20,4 +20,9 @@
     color: white;
     text-decoration: none;
   }
+  @media screen and (max-width: 720px) {
+    a[id="navbar__github_link"] {
+      display: none;
+    }
+  }
 }

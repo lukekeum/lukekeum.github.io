@@ -10,7 +10,9 @@ export default function Navbar({}: NavbarProps) {
       <h1>
         <Link to="/">lukekeum.me</Link>
       </h1>
-      <a href="https://github.com/lukekeum">github</a>
+      <a href="https://github.com/lukekeum" id="navbar__github_link">
+        github
+      </a>
     </nav>
   )
 }
