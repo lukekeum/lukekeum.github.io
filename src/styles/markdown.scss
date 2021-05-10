@@ -1,0 +1,30 @@
+* {
+  word-break: break-all;
+}
+p {
+  font-size: 1rem;
+}
+
+blockquote {
+  margin: 0;
+  width: 100%;
+  background: #474747;
+  p {
+    padding: 1.5rem 1.5rem;
+  }
+}
+
+p > code {
+  background: #575757;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+p > a {
+  color: #faff11;
+  text-decoration: underline;
+}
+
+pre[class*="language-"] {
+  border-radius: 5px;
+}
