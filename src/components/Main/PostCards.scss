@@ -1,0 +1,6 @@
+#main__post_cards {
+  display: flex;
+  @media screen and (max-width: 1320px) {
+    flex-direction: column;
+  }
+}

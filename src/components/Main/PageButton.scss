@@ -1,0 +1,23 @@
+#main__page_button {
+  display: flex;
+  align-items: center;
+  margin: 4.6875rem 0;
+  user-select: none;
+  & > div {
+    display: block;
+    width: 1px;
+    height: 35px;
+    background: white;
+    margin: 0 20.5px;
+  }
+  & > p {
+    color: white;
+    font-size: 1.5rem;
+    padding: 0;
+    cursor: pointer;
+  }
+  & > p[id="main__page_button_disabled"] {
+    color: #6f6f6f;
+    cursor: not-allowed;
+  }
+}
