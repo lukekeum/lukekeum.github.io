@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://lukekeum.me`,
     title: `lukekeum.me`,
     description: `This is blog of lukekeum`,
     author: `@lukekeum`,
@@ -66,6 +67,20 @@ module.exports = {
               quality: 50,
               backgroundColor: "transparent",
             },
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-robot-txt`,
+      options: {
+        host: "https://lukekeum.me",
+        sitemap: "https://lukekeum.me/sitemap.xml",
+        policy: [
+          {
+            userAgent: "*",
+            allow: "/",
           },
         ],
       },
