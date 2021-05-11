@@ -1,6 +1,5 @@
 p {
   font-size: 1rem;
-  word-break: break-all;
   line-height: 1.5;
 }
 
@@ -13,7 +12,9 @@ blockquote {
   }
 }
 
-p > code {
+p code,
+ol code,
+ul code {
   background: #575757;
   padding: 2px 5px;
   border-radius: 5px;
@@ -31,4 +32,14 @@ pre[class*="language-"] {
 img[class="gatsby-resp-image-image"] {
   background: transparent;
   width: 100%;
+}
+
+ol,
+ul {
+  margin-left: 2rem;
+  padding: 0;
+  li {
+    margin-top: 0.5rem;
+    line-height: 1.5;
+  }
 }
