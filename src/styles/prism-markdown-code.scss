@@ -94,6 +94,12 @@ code {
       background: #42c4cc;
     }
   }
+  &[class="language-graphql"] {
+    &::before {
+      content: "GQL";
+      background: #cc42c6;
+    }
+  }
   &::before {
     display: block;
     width: 45px;
