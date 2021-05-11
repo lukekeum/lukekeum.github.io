@@ -81,7 +81,7 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-plugin-robot-txt`,
+      resolve: `gatsby-plugin-robots-txt`,
       options: {
         host: "https://lukekeum.me",
         sitemap: "https://lukekeum.me/sitemap.xml",
