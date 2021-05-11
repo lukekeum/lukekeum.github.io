@@ -1,11 +1,19 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://lukekeum.me`,
     title: `lukekeum.me`,
     description: `This is blog of lukekeum`,
     author: `@lukekeum`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingid: `G-80P91HVG80`,
+        head: true,
+        anonymize: true,
+      },
+    }`gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -66,6 +74,20 @@ module.exports = {
               quality: 50,
               backgroundColor: "transparent",
             },
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-robot-txt`,
+      options: {
+        host: "https://lukekeum.me",
+        sitemap: "https://lukekeum.me/sitemap.xml",
+        policy: [
+          {
+            userAgent: "*",
+            allow: "/",
           },
         ],
       },
