@@ -13,7 +13,8 @@ module.exports = {
         head: true,
         anonymize: true,
       },
-    }`gatsby-plugin-react-helmet`,
+    },
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
