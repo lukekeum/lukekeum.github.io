@@ -8,7 +8,7 @@ interface PostsProps {
 
 export default function Posts({ data }: PostsProps) {
   const date = useMemo(() => {
-    const date = String(data.frontmatter.date).replaceAll("-", "/")
+    const date = data.frontmatter.date.replace(/-/gi, "/")
     return date
   }, [data])
 
