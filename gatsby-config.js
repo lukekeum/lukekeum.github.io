@@ -6,7 +6,14 @@ module.exports = {
     author: `@lukekeum`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingid: `G-80P91HVG80`,
+        head: true,
+        anonymize: true,
+      },
+    }`gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
