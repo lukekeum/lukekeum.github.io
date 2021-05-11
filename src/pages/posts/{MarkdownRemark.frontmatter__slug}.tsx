@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Posts from "../../components/Posts"
 import Navbar from "../../components/Navbar"
+import Seo from "../../components/Seo"
 
 export interface PostQueryType {
   html: string
@@ -23,6 +24,7 @@ export default function Template({ data }: TemplateProps) {
 
   return (
     <>
+      <Seo title={`${markdownRemark.frontmatter.title}`} />
       <Navbar />
       <Posts data={markdownRemark} />
     </>
