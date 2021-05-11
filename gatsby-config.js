@@ -6,12 +6,26 @@ module.exports = {
     author: `@lukekeum`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-gtag`,
       options: {
         trackingid: `G-80P91HVG80`,
         head: true,
         anonymize: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: "https://lukekeum.me",
+        sitemap: "https://lukekeum.me/sitemap.xml",
+        policy: [
+          {
+            userAgent: "*",
+            allow: "/",
+          },
+        ],
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -75,20 +89,6 @@ module.exports = {
               quality: 50,
               backgroundColor: "transparent",
             },
-          },
-        ],
-      },
-    },
-    `gatsby-plugin-sitemap`,
-    {
-      resolve: `gatsby-plugin-robots-txt`,
-      options: {
-        host: "https://lukekeum.me",
-        sitemap: "https://lukekeum.me/sitemap.xml",
-        policy: [
-          {
-            userAgent: "*",
-            allow: "/",
           },
         ],
       },

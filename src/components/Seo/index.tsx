@@ -66,6 +66,10 @@ function Seo({ description = "", lang = "ko", meta = [], title }: SeoProps) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: "google-site-verification",
+          content: "TEgnHxuY-eiWdIK0sDrmKnaOsxaPGVLNRa-I6c4VaOk",
+        },
       ].concat(meta)}
     />
   )
