@@ -56,6 +56,17 @@ module.exports = {
               noInlineHighlight: true,
             },
           },
+          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              linkImagesToOriginal: true,
+              maxWidth: 912,
+              withWebp: true,
+              quality: 50,
+              backgroundColor: "transparent",
+            },
+          },
         ],
       },
     },

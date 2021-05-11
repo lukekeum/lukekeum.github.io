@@ -28,3 +28,8 @@ p > a {
 pre[class*="language-"] {
   border-radius: 5px;
 }
+
+img[class="gatsby-resp-image-image"] {
+  background: transparent;
+  width: 100%;
+}
