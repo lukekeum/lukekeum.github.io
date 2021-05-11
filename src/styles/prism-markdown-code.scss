@@ -48,7 +48,7 @@ code {
   &[class="language-js"] {
     &::before {
       content: "JS";
-      background: #ffce51;
+      background: #e9b633;
     }
   }
   &[class="language-shell"] {
@@ -98,6 +98,12 @@ code {
     &::before {
       content: "GQL";
       background: #cc42c6;
+    }
+  }
+  &[class="language-json"] {
+    &::before {
+      content: "JSON";
+      background: #e9b633;
     }
   }
   &::before {
